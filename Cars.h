@@ -15,9 +15,13 @@
     NSString* make;
     NSString* model;
 }
+-(id) init: (NSString*) make model: (NSString*) model;
+- (void) dealloc;
++ (id) alloc;
 -(void) Print;
 -(void) setWheelCount: (int) wc;
 -(int) getWheelCount;
+-(id) init: (NSString*) make;
 -(id) init;
 @end
 #endif

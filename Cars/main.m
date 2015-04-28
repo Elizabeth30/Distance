@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
       Cars* myCar=[Cars alloc];
-        myCar=[myCar init];
+        myCar=[myCar init: @"jeep" model: @"wrangler"];
         [myCar Print];
         
         // insert code here...
