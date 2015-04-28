@@ -21,11 +21,28 @@
     self->make=@"Taurus";
     return self;
 }
+-(void) dealloc{
+    NSLog (@"indealloc");
+}
++(id) alloc{
+    NSLog (@"inalloc");
+    return [super alloc];
+}
+
 -(void) setWheelCount: (int) wc {
      self->wheelcount = wc;
 }
 - (int) getWheelCount {
     return self->wheelcount;
 }
-
+-(id) init: (NSString*) make{
+    self->model=model;
+    self->make=make;
+    return self;
+}
+-(id) init: (NSString*) make model: (NSString*) model{
+    self->model=model;
+    self->make=make;
+    return self;
+}
 @end
